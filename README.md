@@ -21,7 +21,7 @@ Altered Carbon es un tema oscuro para Visual Studio Code inspirado en el elegant
 
 ## Instalación
 
-1. Descarga el archivo `.vsix` ➡️ [Altered Carbon]().
+1. Descarga el archivo `.vsix` ➡️ [Altered Carbon](https://github.com/unai-navarro/altered-carbon-theme/blob/main/public/assets/altered-carbon-0.0.1.vsix).
 2. Abre VSCode.
 3. Presiona `Ctrl+Shift+P` y escribe: `Extensions: Install from VSIX...`.
 4. Selecciona el archivo descargado.
