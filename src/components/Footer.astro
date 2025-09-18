@@ -1,0 +1,40 @@
+<footer class="footer">
+  <a
+    href="https://github.com/unai-navarro"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="gitlab-link"
+  >
+    <img class="gitlab-icon" src="assets/github.svg" alt="gitlab logo" />
+  </a>
+</footer>
+
+<style>
+  .footer {
+    background: var(--status-bg);
+    color: var(--sidebar-fg);
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px var(--shadow);
+    margin-top: 40px;
+  }
+
+  .gitlab-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--sidebar-fg);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .gitlab-icon:hover {
+    color: var(--accent-teal);
+  }
+
+  .gitlab-icon {
+    width: 40px;
+    height: 40px;
+  }
+</style>

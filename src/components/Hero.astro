@@ -1,0 +1,423 @@
+---
+
+---
+
+<section class="hero" id="hero" aria-label="Presentación">
+  <div class="container hero-grid">
+    <div>
+      <span class="kicker">Tema para VS Code</span>
+      <h1>Altered Carbon</h1>
+      <p>
+        Tema oscuro inspirado en el esquema de colores del tema Carbon de
+        IntelliJ IDEA.
+      </p>
+
+      <div class="badge" aria-label="Compatibilidad">
+        <span>VS Code</span>
+        <span aria-hidden="true">•</span>
+        <span>VSCodium</span>
+        <span aria-hidden="true">•</span>
+        <span>Cursor</span>
+      </div>
+
+      <div class="hero-cta">
+        <a
+          id="downloadVsix"
+          class="btn btn-primary"
+          href="./assets/altered-carbon.vsix"
+          download
+          aria-label="Descargar archivo VSIX de Altered Carbon"
+        >
+          <!-- SVG inline ligero -->
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 3a1 1 0 0 1 1 1v8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4.007 4.007a1.5 1.5 0 0 1-2.121 0L6.572 11.707a1 1 0 1 1 1.414-1.414L10 12.586V4a1 1 0 0 1 1-1zM5 19a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5z"
+            ></path>
+          </svg>
+          Descargar .vsix
+        </a>
+      </div>
+    </div>
+
+    <!-- Mockup editor -->
+    <div class="mock" aria-label="Vista previa estilo VS Code">
+      <div class="mock-titlebar">
+        <div class="traffic" aria-hidden="true">
+          <span class="dot" style="background: #e06c75"></span>
+          <span class="dot" style="background: #e5c07b"></span>
+          <span class="dot" style="background: #98c379"></span>
+        </div>
+        <strong>Altered Carbon</strong>
+      </div>
+
+      <div class="mock-body">
+        <aside class="sidebar" aria-label="Barra lateral">
+          <h4>EXPLORER</h4>
+          <div class="item active">src</div>
+          <div class="item">assets</div>
+          <div class="item">README.md</div>
+          <div class="item">package.json</div>
+        </aside>
+
+        <div class="editor">
+          <div class="tabs" role="tablist" aria-label="Pestañas de archivos">
+            <div
+              class="tab active"
+              role="tab"
+              aria-selected="true"
+              id="tab-js"
+              tabindex="0"
+            >
+              app.js
+            </div>
+            <div
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              id="tab-py"
+              tabindex="0"
+            >
+              main.py
+            </div>
+          </div>
+
+          <!-- Bloques de código (JS/Python) -->
+          <div
+            class="code-wrap"
+            role="region"
+            aria-label="Código de ejemplo con resaltado simulado"
+          >
+            <pre
+              id="block-js"
+              aria-labelledby="tab-js">
+<span class="gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</span><code class="code">
+<span class="indent active"><span class="sel">/* Demo resaltado y selección */</span></span>
+<span class="indent">const theme = <span class="bracket">&#123;</span>
+  name: "Altered Carbon",
+  accents: ["<span class='sel inactive'>teal</span>", "yellow"],
+  background: "<span class='cursor'>#172030</span>"
+<span class="bracket">&#125;</span>;</span>
+<span class="indent active">function boot(modules = []) <span class="bracket">&#123;</span>
+  return modules.map(m =&gt; <span class="bracket">&#123;</span> ready: true, m <span class="bracket">&#125;</span>);
+<span class="bracket">&#125;</span></span>
+<span class="indent">// TODO: aplicar indent guides y números de línea
+</span></code></pre>
+
+            <pre
+              id="block-py"
+              style="display: none"
+              aria-labelledby="tab-py">
+<span class="gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</span><code class="code">
+<span class="indent active"><span class="sel"># Demo resaltado y selección</span></span>
+<span class="indent">from dataclasses import dataclass</span>
+<span class="indent">@dataclass</span>
+<span class="indent">class Theme:</span>
+<span class="indent active">  name: str</span>
+<span class="indent">  accents: list[str]</span>
+<span class="indent">  background: str</span>
+<span class="indent">t = Theme("Altered Carbon", ["<span class='sel inactive'>teal</span>", "yellow"], "<span class='cursor'>#172030</span>")</span>
+</code></pre>
+          </div>
+
+          <div class="statusbar">
+            <span>UTF-8 | LF | JavaScript</span>
+            <span>Ln 6, Col 26</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 5rem 0 3rem;
+    background: radial-gradient(
+        60rem 30rem at 10% -10%,
+        rgba(42, 161, 152, 0.18),
+        transparent 50%
+      ),
+      radial-gradient(
+        50rem 25rem at 90% 0%,
+        rgba(255, 203, 107, 0.14),
+        transparent 50%
+      ),
+      var(--bg-editor);
+    border-bottom: 1px solid var(--panel-border);
+    overflow: clip;
+  }
+  .hero-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr 2.3fr;
+    }
+  }
+  .kicker {
+    color: var(--sidebar-title);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+  }
+  .hero h1 {
+    margin: 0.25rem 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: 0.2px;
+  }
+  .hero p {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1rem, 1.6vw, 1.125rem);
+    color: var(--fg-editor);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    background: #1a2434;
+    border: 1px solid var(--panel-border);
+    color: var(--fg-editor);
+    font-size: 0.875rem;
+  }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  /* Mockup ventana "VS Code" */
+
+  .mock {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    background: var(--panel-bg);
+    box-shadow: 0 16px 48px var(--shadow);
+    overflow: hidden;
+  }
+  .mock-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--titlebar-bg);
+    color: var(--titlebar-fg);
+    border-bottom: 1px solid var(--panel-border);
+    font-size: 0.9rem;
+  }
+  .traffic {
+    display: inline-flex;
+    gap: 0.4rem;
+    margin-right: 0.5rem;
+  }
+  .dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #586e75;
+  }
+  .mock-body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    min-height: 300px;
+  }
+  @media (max-width: 480px) {
+    .mock-body {
+      grid-template-columns: 120px 1fr;
+    }
+  }
+
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-fg);
+    border-right: 1px solid var(--panel-border);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sidebar h4 {
+    margin: 0 0 0.5rem;
+    color: var(--sidebar-title);
+    font-size: 0.9rem;
+  }
+  .sidebar .item {
+    padding: 0.4rem 0.5rem;
+    border-radius: 8px;
+    color: var(--sidebar-fg);
+    font-size: 0.9rem;
+  }
+  .sidebar .item.active {
+    background: var(--tab-active-bg);
+    border: 1px solid var(--panel-border);
+  }
+
+  .editor {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 280px;
+    background: var(--bg-editor);
+  }
+  .tabs {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    background: var(--tabs-bg);
+    border-bottom: 1px solid var(--panel-border);
+    padding: 0.25rem 0.5rem;
+  }
+  .tab {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--tab-border);
+    border-bottom-color: transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--tab-inactive-fg);
+    background: var(--tab-inactive-bg);
+  }
+  .tab.active {
+    background: var(--tab-active-bg);
+    color: var(--tab-active-fg);
+  }
+
+  /* Zona de código con números de línea, selección y cursor */
+  .code-wrap {
+    position: relative;
+    overflow: auto;
+    max-height: 360px;
+    background: var(--bg-editor);
+  }
+  pre {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.95rem;
+  }
+  .gutter {
+    background: #1a2434;
+    color: var(--line-number);
+    text-align: right;
+    padding: 0.5rem 0.75rem;
+    user-select: none;
+    border-right: 1px dashed var(--whitespace);
+    min-width: 2.5rem;
+  }
+  .code {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    color: var(--fg-editor);
+    tab-size: 2;
+    white-space: pre;
+    background: linear-gradient(var(--line-highlight), var(--line-highlight)) 0
+      0 / 100% 1.5em no-repeat;
+  }
+  .indent {
+    border-left: 1px solid var(--indent);
+    padding-left: 0.75rem;
+  }
+  .indent.active {
+    border-left-color: var(--indent-active);
+  }
+  .sel {
+    background: color-mix(in oklab, var(--selection) 70%, transparent);
+  }
+  .sel.inactive {
+    background: var(--selection-inactive);
+  }
+  .bracket {
+    background: var(--bracket-bg);
+    border: 1px solid var(--bracket-border);
+    border-radius: 4px;
+    padding-inline: 0.2ch;
+  }
+  /* Cursor parpadeante */
+  .cursor {
+    position: relative;
+  }
+  .cursor::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 1.15em;
+    background: var(--cursor);
+    transform: translateX(0.1ch) translateY(0.15em);
+    animation: caret 1s steps(1) infinite;
+  }
+  @keyframes caret {
+    50% {
+      opacity: 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .cursor::after {
+      animation: none;
+    }
+    .btn,
+    .badge {
+      transition: none !important;
+    }
+  }
+
+  .statusbar {
+    background: var(--status-bg);
+    color: var(--fg-editor);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--panel-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*==============================
+      SECCIONES BASE
+    ==============================*/
+  section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .section-title {
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+    margin: 0 0 1.25rem;
+  }
+  .muted {
+    color: #8fa2a6;
+  }
+</style>

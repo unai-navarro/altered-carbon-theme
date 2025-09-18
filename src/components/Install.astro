@@ -1,0 +1,63 @@
+---
+
+---
+
+<section id="install" aria-label="Cómo instalar">
+  <div class="container">
+    <h2 class="section-title">Cómo instalar</h2>
+    <div class="steps">
+      <div>1. Descargar el archivo <span class="kbd">.vsix</span>.</div>
+      <div>2. Abre VSCode.</div>
+      <div>
+        3. Presiona <span class="kbd">Ctrl+Shift+P</span> y escribe:
+        <span class="kbd">Extensions: Install from VSIX...</span>
+      </div>
+      <div>4. Selecciona el archivo descargado.</div>
+      <div>
+        5. Aplica el tema desde
+        <span class="kbd">Preferences: Color Theme`</span>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .steps {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .kbd {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    border: 1px solid var(--panel-border);
+    background: #1a2434;
+    color: var(--fg-editor);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  .copy-wrap {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .code-inline {
+    background: #1a2434;
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .btn-ghost {
+    border: 1px solid var(--panel-border);
+    background: transparent;
+    color: var(--fg-editor);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+  }
+</style>
