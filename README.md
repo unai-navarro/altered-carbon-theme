@@ -6,16 +6,16 @@ Altered Carbon es un tema oscuro para Visual Studio Code inspirado en el elegant
 
 <table>
   <tr>
-    <td><img src="img/html.png" width="400"/></td>
-    <td><img src="img/css.png" width="400"/></td>
+    <td><img src="./public/assets/html.png" width="400"/></td>
+    <td><img src="./public/assets/css.png" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="img/js.png" width="400"/></td>
-    <td><img src="img/ts.png" width="400"/></td>
+    <td><img src="./public/assets/js.png" width="400"/></td>
+    <td><img src="./public/assets/ts.png" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="img/json.png" width="400"/></td>
-    <td><img src="img/md.png" width="400"/></td>
+    <td><img src="./public/assets/json.png" width="400"/></td>
+    <td><img src="./public/assets/md.png" width="400"/></td>
   </tr>
 </table>
 
